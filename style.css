@@ -1,0 +1,232 @@
+/* ============================================================
+   KMA — The Works
+   Single continuous longform scroll. Typographic, restraint-led.
+   ============================================================ */
+
+:root{
+  --ink:#1a1a1a;
+  --ink-soft:#444;
+  --ink-faint:#8a8a82;
+  --rule:rgba(0,0,0,0.12);
+  --bg:#fdfdfb;
+  --measure:34rem;
+}
+
+*{box-sizing:border-box;}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+  font-size:19px;
+  line-height:1.62;
+  font-weight:400;
+}
+
+/* shared horizontal rhythm */
+.wrap{max-width:var(--measure);margin:0 auto;padding:0 1.5rem;}
+
+/* masthead */
+header.masthead{padding:6.5rem 0 0;}
+.eyebrow{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:0.72rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--ink-faint);font-weight:500;margin:0 0 1.6rem;
+}
+h1.title{
+  font-weight:400;font-size:2.7rem;line-height:1.12;
+  letter-spacing:-0.012em;margin:0 0 1.8rem;
+}
+.standfirst{
+  font-size:1.18rem;line-height:1.6;color:var(--ink-soft);
+  margin:0 0 1rem;max-width:30rem;
+}
+.masthead-rule{border:0;border-top:1px solid var(--rule);margin:5rem 0 0;}
+
+/* a single work "movement" */
+.work{padding:5.5rem 0 0;}
+.work-meta{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--ink-faint);font-weight:500;margin:0 0 1.1rem;
+}
+h2.work-title{
+  font-weight:400;font-size:2.05rem;line-height:1.16;
+  letter-spacing:-0.01em;margin:0 0 0.55rem;
+}
+h2.work-title .sub{
+  display:block;font-size:1.32rem;color:var(--ink-soft);
+  margin-top:0.35rem;letter-spacing:0;
+}
+.work-line{
+  font-style:italic;color:var(--ink-faint);
+  font-size:1.02rem;margin:0 0 2.1rem;
+}
+.work p{margin:0 0 1.45rem;}
+.work p:last-child{margin-bottom:0;}
+.work .lede{font-size:1.06rem;}
+
+/* the written seam between movements */
+.seam{padding:4rem 0 0;text-align:center;}
+.seam p{
+  font-style:italic;color:var(--ink-faint);
+  font-size:1.05rem;line-height:1.55;max-width:24rem;margin:0 auto;
+}
+.seam .mark{
+  display:block;color:var(--rule);font-size:1.4rem;
+  letter-spacing:0.6em;margin:0 0 1.8rem;padding-left:0.6em;
+}
+
+/* coda / chronology link */
+.coda{padding:7rem 0 9rem;}
+.coda-rule{border:0;border-top:1px solid var(--rule);margin:0 0 3rem;}
+.coda a{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:0.78rem;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;font-weight:500;
+  border-bottom:1px solid var(--ink-faint);padding-bottom:2px;
+}
+.coda a:hover{border-color:var(--ink);}
+.coda p{color:var(--ink-faint);font-style:italic;margin:0 0 1.6rem;}
+
+@media (max-width:600px){
+  body{font-size:18px;}
+  h1.title{font-size:2.1rem;}
+  h2.work-title{font-size:1.7rem;}
+  .work{padding-top:4.5rem;}
+}
+
+/* ============================================================
+   HOME PAGE + SHARED NAVIGATION
+   ============================================================ */
+/* ---- shared masthead + footer navigation (non-sticky) ---- */
+  .nav-wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem;}
+  .masthead-nav{
+    display:flex;align-items:baseline;justify-content:space-between;
+    gap:1.5rem;flex-wrap:wrap;
+    padding:1.9rem 0 0;
+  }
+  .wordmark{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:0.82rem;letter-spacing:0.28em;text-transform:uppercase;
+    font-weight:600;color:var(--ink);text-decoration:none;
+  }
+  .nav-links{
+    display:flex;align-items:baseline;gap:1.4rem;flex-wrap:wrap;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:0.72rem;letter-spacing:0.13em;text-transform:uppercase;font-weight:500;
+  }
+  .nav-links a{color:var(--ink-faint);text-decoration:none;padding-bottom:2px;}
+  .nav-links a:hover{color:var(--ink);}
+  .nav-links a[aria-current]{color:var(--ink);border-bottom:1px solid var(--ink-faint);}
+  .nav-sep{
+    width:1px;align-self:stretch;background:var(--rule);
+    margin:0 0.2rem;
+  }
+
+  .site-footer{
+    border-top:1px solid var(--rule);
+    margin-top:2rem;
+    padding:3rem 0 4.5rem;
+  }
+  .footer-nav{
+    display:flex;align-items:baseline;justify-content:space-between;
+    gap:1.5rem;flex-wrap:wrap;
+  }
+  .footer-nav .colophon{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:0.72rem;letter-spacing:0.04em;color:var(--ink-faint);font-weight:400;
+  }
+
+  @media (max-width:600px){
+    .masthead-nav{padding-top:1.3rem;}
+    .nav-links{gap:1rem;font-size:0.66rem;}
+    .nav-sep{display:none;}
+  }
+
+  /* Home pages use a slightly wider column than the Works reading measure */
+  .frontispiece .wrap,
+  .below .wrap{max-width:40rem;}
+
+  .frontispiece{
+    padding:9vh 0 7rem;
+  }
+  .standard{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:0.72rem;letter-spacing:0.28em;text-transform:uppercase;
+    color:var(--ink-faint);font-weight:500;margin:0 0 2.6rem;
+  }
+  .opening{max-width:34rem;}
+  .opening .first,
+  .opening .turn{
+    font-size:1.5rem;line-height:1.46;letter-spacing:-0.006em;margin:0;
+  }
+  .opening .first{margin-bottom:1.7rem;}
+  .opening em{font-style:italic;}
+
+  .orient{margin-top:4.5rem;}
+  .orient p{
+    font-size:1.04rem;color:var(--ink-soft);
+    max-width:30rem;margin:0 0 1.6rem;
+  }
+  .enter{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:0.78rem;letter-spacing:0.16em;text-transform:uppercase;
+    color:var(--ink);text-decoration:none;font-weight:500;
+    border-bottom:1px solid var(--ink-faint);padding-bottom:3px;
+  }
+  .enter:hover{border-color:var(--ink);}
+
+  figure.plate{
+    margin:5rem auto;
+    max-width:62rem;
+    padding:0 1.5rem;
+  }
+  figure.plate img{
+    display:block;width:100%;height:auto;background:#000;
+  }
+  figure.plate figcaption{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:0.74rem;letter-spacing:0.04em;color:var(--ink-faint);font-weight:400;
+    margin:0;padding:1rem 0 0;
+  }
+  figure.plate figcaption em{font-style:italic;}
+
+  .below{padding:2rem 0 8rem;}
+  .below .lead{
+    font-size:1.34rem;line-height:1.5;color:var(--ink);
+    margin:0 0 2.4rem;max-width:32rem;letter-spacing:-0.005em;
+  }
+  .below p{margin:0 0 1.5rem;max-width:34rem;}
+  .below p:last-of-type{margin-bottom:0;}
+  .below em{font-style:italic;}
+
+  .contents{
+    margin-top:4.5rem;padding-top:2.8rem;
+    border-top:1px solid var(--rule);
+  }
+  .contents-label{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--ink-faint);font-weight:500;margin:0 0 1.6rem;
+  }
+  .contents ol{list-style:none;margin:0;padding:0;}
+  .contents li{padding:0.65rem 0;border-bottom:1px solid var(--rule);}
+  .contents li:last-child{border-bottom:0;}
+  .contents a{color:inherit;text-decoration:none;display:flex;width:100%;align-items:baseline;gap:1rem;}
+  .contents .work-name{font-size:1.22rem;color:var(--ink);}
+  .contents .work-name em{font-style:italic;}
+  .contents .work-year{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:0.8rem;color:var(--ink-faint);letter-spacing:0.04em;
+    margin-left:auto;white-space:nowrap;
+  }
+  .contents a:hover .work-name{color:#000;}
+
+  @media (max-width:600px){
+    body{font-size:18px;}
+    .opening .first,.opening .turn{font-size:1.22rem;line-height:1.48;}
+    .below .lead{font-size:1.18rem;}
+    .contents .work-name{font-size:1.1rem;}
+  }
