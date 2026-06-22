@@ -82,7 +82,46 @@ h2.work-title .sub{
 }
 
 /* coda / chronology link */
-.coda{padding:7rem 0 9rem;}
+.coda{padding:7rem 0 0;}
+
+/* ---- complete chronology: dense, quiet, year-grouped ---- */
+.chronology{padding:6rem 0 7rem;}
+.chronology-head{
+  border-top:1px solid var(--rule);
+  padding-top:2.8rem;margin-bottom:3.2rem;
+}
+.chronology-head h2{
+  font-weight:400;font-size:1.5rem;letter-spacing:-0.008em;margin:0 0 0.6rem;
+}
+.chronology-head p{
+  font-size:1rem;color:var(--ink-faint);font-style:italic;margin:0;max-width:32rem;
+}
+.year-block{
+  display:grid;grid-template-columns:4.5rem 1fr;gap:1.4rem;
+  padding:1.1rem 0;border-bottom:1px solid var(--rule);
+}
+.year-block:last-of-type{border-bottom:0;}
+.year-block .yr{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:0.82rem;font-weight:600;letter-spacing:0.04em;color:var(--ink);
+  padding-top:0.18rem;
+}
+.year-block ul{list-style:none;margin:0;padding:0;}
+.year-block li{
+  margin:0 0 0.5rem;font-size:1.02rem;line-height:1.4;color:var(--ink-soft);
+}
+.year-block li:last-child{margin-bottom:0;}
+.year-block li .w{color:var(--ink);font-style:italic;}
+.year-block li .place{color:var(--ink-faint);}
+
+.chronology-note{
+  margin-top:3rem;padding-top:1.6rem;border-top:1px solid var(--rule);
+  font-size:0.9rem;color:var(--ink-faint);font-style:italic;max-width:34rem;
+}
+
+@media (max-width:600px){
+  .year-block{grid-template-columns:3.2rem 1fr;gap:1rem;}
+}
 .coda-rule{border:0;border-top:1px solid var(--rule);margin:0 0 3rem;}
 .coda a{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
