@@ -118,6 +118,30 @@ h2.work-title .sub{
   font-size:0.9rem;color:var(--ink-faint);font-style:italic;max-width:34rem;
 }
 
+/* in-preparation / pending markers */
+.pending{padding:3rem 0 0;}
+.pending-note{
+  max-width:34rem;margin:0 auto;
+  font-style:italic;color:var(--ink-faint);
+  font-size:1.04rem;line-height:1.55;
+}
+
+/* bibliography entries */
+.biblio{max-width:36rem;}
+.biblio p{
+  font-size:0.98rem;line-height:1.5;color:var(--ink-soft);
+  margin:0 0 1.1rem;padding-left:1.4rem;text-indent:-1.4rem;
+}
+.biblio p:last-child{margin-bottom:0;}
+.biblio em{font-style:italic;color:var(--ink);}
+
+/* onward link to kitmonkman.com */
+.onward{
+  color:var(--ink);text-decoration:none;
+  border-bottom:1px solid var(--ink-faint);padding-bottom:1px;
+}
+.onward:hover{border-color:var(--ink);}
+
 @media (max-width:600px){
   .year-block{grid-template-columns:3.2rem 1fr;gap:1rem;}
 }
